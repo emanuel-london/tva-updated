@@ -1,0 +1,38 @@
+<div class="select-band select-band-contents select-band-map wow slideInDown" data-wow-duration="1s" style="margin:0">
+<app-select-band></app-select-band>
+</div>
+ <mgl-map id='map'
+    [style]="'mapbox://styles/contentscience/cjb2mv6soso1s2speqr5g9mhh'"
+    [zoom]="[7]"
+    [center]="[-83.850163266,35.955496178]"
+  >
+  <mgl-control
+  mglNavigation
+></mgl-control>
+
+
+<!--This is where you set the content for markers it must be in the markers tags-->
+
+<mgl-marker [lngLat]="[-83.850163266,35.955496178]" >
+  <div id="dialog-hydropower" class="zoom-anim-dialog white-popup row hide ">
+    <div class="col-sm-4 side-panel">
+      <img src="dist/images/lock-lights.png" class="img-responsive" alt="">
+      <div class="text">
+        <h3>How Dams Work to Provide Power</h3>
+        <p>Opening the lock releases water from the dam. The more water that powers through the turbine, the more electricity is produced to power everything from the lights in your room to the playstation on your TV.</p>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="featured-content">
+        <h2>Hydropower</h2>
+        <h3>How Dams Work to Provide Power</h3>
+        <div class="video animated slideInUp">
+          <iframe src="https://player.vimeo.com/video/238422734?loop=1&autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+   </mgl-marker>
+
+   
+  </mgl-map>

@@ -1,0 +1,52 @@
+<body class="sparky bootstrap home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="slider-container">
+          <div class="row">
+            <div class="slider-labels col-xs-12">
+              <a href="#" data-slider="1"><span class="icon pe-is-w-sun-1"></span></a>
+              <a href="#" data-slider="2"><span class="icon pe-is-w-partly-cloudy-1"></span></a>
+              <a href="#" data-slider="3"><span class="icon pe-is-w-mostly-cloudy-1"></span></a>
+              <a href="#" data-slider="4"><span class="icon pe-is-w-moon-1"></span></a>
+            </div>
+            <div id="slider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="welcome animated fadeIn">
+          <h2>Let's start by choosing a few journey paths. This is your River Trek, so tell us what you are interested in, and let's get started.</h2>
+        </div>
+        <div class="form-group level-select level-select-trek row animated fadeIn">
+          <div class="col-md-4 col-sm-6">
+            <label><input type="checkbox" name="level" value="river-anatomy" checked disabled> River Anatomy</label><br>
+            <label><input type="checkbox" name="level" value="navigation" checked disabled> Navigation</label><br>
+            <label><input type="checkbox" name="level" value="recreation"> Recreation</label>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <label><input type="checkbox" name="level" value="wastershed-management" checked disabled> Watershed Management</label><br>
+            <label><input type="checkbox" name="level" value="hydropower" checked disabled> Hydropower</label><br>
+            <label><input type="checkbox" name="level" value="history" checked disabled> History</label>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <label><input type="checkbox" name="level" value="habitats"> Habitats</label><br>
+            <label><input type="checkbox" name="level" value="biodiversity"> Biodiversity</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 button-holder">
+        <div class="button animated fadeIn">
+          <a routerLink="/trek-start" class="btn btn-lg btn-start">Get Started</a>
+          <h3>The Tennessee River has something for every explorer, and you can explore the Tennessee River many ways.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <usernav-component></usernav-component> 
+    <img src="assets/images/compass.png" class="compass animated slideInUp">

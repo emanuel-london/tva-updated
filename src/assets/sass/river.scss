@@ -1,0 +1,812 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #2e98be url('./images/topo-overlay.png') bottom center no-repeat;
+  transition:2s;
+}
+
+.overlay {
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  -o-transition:2s;
+  -ms-transition:2s;
+  -moz-transition:2s;
+  -webkit-transition:2s;
+  transition:2s;
+}
+
+.overlay-sunny {
+  background-image: url('./images/overlay-sunny.png');
+  opacity: 0.5;
+}
+
+.overlay-partly-cloudy {
+  background-image: url('./images/overlay-partly-cloudy.jpg');
+  opacity: 0.5;
+}
+
+.overlay-cloudy {
+  background-image: url('./images/overlay-cloudy.jpg');
+  opacity: 0.75;
+}
+
+.overlay-stars {
+  background-image: url('./images/overlay-stars-blur.jpg');
+  opacity: 0.9;
+}
+
+.welcome {
+  margin: auto;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  max-width: 800px;
+
+  @include media(">=widescreen") {
+    padding-top: 40px;
+  }
+
+  h4 {
+    font-size: 125%;
+    line-height: 1.5;
+
+    @include media(">=widescreen") {
+      font-size: 175%;
+    }
+  }
+
+  img {
+    margin: 0 0 -20px 80px;
+    max-width: 40px;
+    display: block;
+
+    @include media(">=widescreen") {
+      margin: 0 0 -20px 80px;
+      max-width: 100px;
+    }
+  }
+}
+
+
+
+h1 {
+  padding: 20px 0;
+  font-size: 50px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #fff;
+
+  @include media(">=tablet") {
+    padding: 40px 0;
+    font-size: 80px;
+  }
+
+  @include media(">=widescreen") {
+    padding: 80 0;
+    font-size: 100px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+}
+
+h3 {
+  font-size: 125%;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.button {
+  text-align: center;
+}
+
+.button-holder {
+  padding: 20px 0;
+
+  @include media(">=tablet") {
+    padding: 40px;
+  }
+
+  @include media(">=widescreen") {
+    padding: 80px;
+  }
+}
+
+.btn-start {
+  padding: 18px 50px 10px 50px;
+  background: #8cc6db;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 40px;
+  border: 2px solid rgba(255,255,255,0.75);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+
+  &.btn-disabled {
+    opacity: 0.25;
+  }
+
+  &:hover {
+    background-color: #82adc0;
+    box-shadow: 5px 5px 40px rgba(0,0,0,0.15);
+    color: #fff;
+  }
+}
+
+.btn-map {
+  padding: 5px 20px 5px 20px;
+  background: #8cc6db;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 40px;
+  border: 1px solid rgba(255,255,255,0.75);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+
+  &.btn-disabled {
+    opacity: 0.25;
+  }
+
+  &:hover {
+    background-color: #82adc0;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.15);
+    color: #fff;
+  }
+}
+
+.select-band {
+  margin: 20px 0;
+  padding: 20px 0;
+  background: #fff;
+  text-align: center;
+
+  @include media(">=tablet") {
+    margin: 40px 0;
+    padding: 40px 0;
+  }
+
+  @include media(">=widescreen") {
+    margin: 80px 0;
+    padding: 40px 0;
+  }
+
+  ul,table {
+    margin: auto;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  li,td {
+    width: 49%;
+
+    @include media(">=tablet") {
+      width: 19%;
+    }
+  }
+
+  a {
+    display: block;
+  }
+
+  .explorer {
+    a {
+      padding-top: 110px;
+      background: url('./images/icon-tva.png') center 20px no-repeat;
+      background-size: 80px 80px;
+      display: block;
+
+      &:after {
+        margin: auto;
+        margin-top: 10px;
+        display: block;
+        width: 98px;
+        height: 21.5px;
+        content: " ";
+      }
+    }
+  }
+
+  .tn-river {
+    a {
+      padding-top: 110px;
+      background: url('./images/icon-river-trek.png') center 20px no-repeat;
+      background-size: 80px 80px;
+
+      &:after {
+        margin: auto;
+        margin-top: 10px;
+        display: block;
+        width: 98px;
+        height: 21.5px;
+        background: url('./images/icon-river-trek-shadow.png') bottom center no-repeat;
+        background-size: 98px 21.5px;
+        content: " ";
+      }
+    }
+  }
+
+  .nuclear {
+    a {
+      padding-top: 110px;
+      background: url('./images/icon-nuclear.png') center 20px no-repeat;
+      background-size: 80px 80px;
+
+      &:after {
+        margin: auto;
+        margin-top: 10px;
+        display: block;
+        width: 98px;
+        height: 21.5px;
+        background: url('./images/icon-nuclear-shadow.png') bottom center no-repeat;
+        background-size: 98px 21.5px;
+        content: " ";
+      }
+    }
+  }
+
+  .wind {
+    a {
+      padding-top: 110px;
+      background: url('./images/icon-wind.png') center 20px no-repeat;
+      background-size: 80px 80px;
+
+      &:after {
+        margin: auto;
+        margin-top: 10px;
+        display: block;
+        width: 98px;
+        height: 21.5px;
+        background: url('./images/icon-wind-shadow.png') bottom center no-repeat;
+        background-size: 98px 21.5px;
+        content: " ";
+      }
+    }
+  }
+
+  .solar {
+    a {
+      padding-top: 110px;
+      background: url('./images/icon-solar.png') center 20px no-repeat;
+      background-size: 80px 80px;
+
+      &:after {
+        margin: auto;
+        margin-top: 10px;
+        display: block;
+        width: 98px;
+        height: 21.5px;
+        background: url('./images/icon-solar-shadow.png') bottom center no-repeat;
+        background-size: 98px 21.5px;
+        content: " ";
+      }
+    }
+  }
+
+  li a,
+  td a {
+    padding: 20px;
+    font-weight: 600;
+    color: #939598;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+
+    &.active,
+    &:hover {
+      background-color: #eee;
+      text-decoration: none;
+      color: rgba(0,0,0,0.75);
+    }
+  }
+}
+
+.select-band-contents {
+  margin-top: 0;
+  padding: 0;
+
+  li,td {
+    padding: 0;
+    // width: 49%;
+    min-width: 150px;
+
+    @include media(">=tablet") {
+      padding: 20px 0;
+      width: 16%;
+    }
+
+    a {
+      padding-top: 60px;
+      background-size: 57px 41px;
+      background-position: center 20px;
+      background-repeat: no-repeat;
+      text-transform: none;
+      color: #214684;
+      display: block;
+
+      @include media(">=tablet") {
+        padding-top: 100px;
+        background-size: 114px 82px;
+      }
+
+      @include media(">=widescreen") {
+        padding-top: 200px;
+        background-size: 228px 164px;
+      }
+
+      @include media("<tablet") {
+        span {
+          font-size: 90%;
+        }
+      }
+
+    }
+  }
+
+  .trek-contents {
+    a {
+      background-image: url('./images/icon-river-trek-contents.png');
+    }
+  }
+
+  .river-navigation {
+    a {
+      background-image: url('./images/icon-river-navigation.png');
+    }
+  }
+
+  .hydropower {
+    a {
+      background-image: url('./images/icon-hydropower.png');
+    }
+  }
+
+  .watershed {
+    a {
+      background-image: url('./images/icon-watershed.png');
+    }
+  }
+
+  .history {
+    a {
+      background-image: url('./images/icon-history.png');
+    }
+  }
+
+  .water-withdrawal {
+    a {
+      background-image: url('./images/icon-water-withdrawal.png');
+    }
+  }
+}
+
+.river-map .select-band-contents {
+  padding: 0;
+}
+
+.select-band-map {
+  td a,
+  li a {
+    padding-top: 60px;
+    background-size: 57px 41px;
+
+    @include media(">=tablet") {
+      padding-top: 100px;
+      background-size: 114px 82px;
+    }
+  }
+}
+
+.backpack .select-band-map {
+  li a {
+    padding-top: 0 !important;
+    background: none !important;
+  }
+}
+
+.level-select {
+  margin-bottom: 40px;
+  text-align: center;
+
+  label {
+    margin: 0 20px 10px 20px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.5);
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    cursor: pointer;
+    line-height: 1;
+
+    @include media(">=widescreen") {
+      margin: 0 20px;
+    }
+
+    .jcf-radio {
+      vertical-align: top;
+    }
+
+    &.jcf-label-active,
+    &:hover {
+      color: #114777;
+    }
+  }
+}
+
+.level-select-trek {
+  padding: 40px 0 0 0;
+  text-align: left;
+  margin: auto;
+  max-width: 1000px;
+  padding-left: 40px;
+
+  @include media(">=tablet") {
+    padding-left: 80px;
+  }
+
+  @include media(">=desktop") {
+    padding-left: 100px;
+  }
+
+  label {
+    margin: 10px 0;
+  }
+
+
+}
+
+.slider-container {
+  padding: 20px 40px;
+  position: relative;
+  @include media(">=widescreen") {
+    padding: 40px;
+    min-width: 400px;
+    float: right;
+  }
+}
+
+#slider {
+  margin: 0 0 40px 0;
+  background: #33a7da;
+  border: none;
+  height: 10px;
+  text-align: left;
+  cursor: pointer;
+
+  .ui-slider-handle {
+    background: #fff;
+    border: none;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.slider-labels {
+  margin: 20px 0 0 0;
+  height: 35px;
+
+  .icon {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    position: absolute;
+    left: calc(0% - 15px);
+    @include media(">=widescreen") {
+      // font-size: 40px;
+    }
+  }
+
+  a:nth-child(2) .icon {
+    left: calc(33.333% - 15px);
+  }
+
+  a:nth-child(3) .icon {
+    left: calc(66.667% - 15px);
+  }
+
+  a:nth-child(4) .icon {
+    left: calc(100% - 15px);
+  }
+
+  a {
+    color: rgba(255,255,255,0.75);
+    &:active,
+    &:focus,
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.tooltip-inner {
+  margin: 0 -40px;
+  background: #114777;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+}
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #114777;
+}
+
+.tooltip.in {
+  opacity: 1;
+}
+
+.bottom-navigation {
+  margin-top: 120px;
+  color: rgba(255,255,255,0.8);
+
+  @include media(">=tablet") {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  ul {
+    text-align: center;
+
+    @include media(">=tablet") {
+      text-align: left;
+    }
+
+    a {
+      color: rgba(255,255,255,0.8);
+      -o-transition:0.5s;
+      -ms-transition:0.5s;
+      -moz-transition:0.5s;
+      -webkit-transition:0.5s;
+      transition:0.5s;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  img {
+    margin: auto;
+    width: 150px;
+    display: block;
+
+    @include media(">=tablet") {
+      float: right;
+    }
+  }
+}
+
+img.compass {
+  position: absolute;
+  bottom: -60px;
+  right: 40%;
+  width: 400px;
+  opacity: 0.25;
+  z-index: -2;
+}
+
+.backpack-icon {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 50px;
+  opacity: 0.75;
+
+  @include media(">=tablet") {
+    top: 250px;
+    width: 75px;
+  }
+
+  @include media(">=tablet") {
+    top: 350px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+// Cards
+
+.slider-container {
+  padding: 40px 0;
+}
+
+.swiper-slide {
+  background: #fff;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+
+  &:hover {
+    background-color: #eee;
+    cursor: pointer;
+    box-shadow: 4px 4px 2px rgba(0,0,0,0.35);
+  }
+
+  h4 {
+    margin: 0;
+    font-weight: 700;
+    color: #163c65;
+  }
+
+  p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+}
+
+.backpack-slides {
+  margin-bottom: 5px;
+
+  .swiper-slide {
+    padding: 10px;
+
+    @include media(">=tablet") {
+      padding: 20px;
+    }
+  }
+
+  .text {
+    height: 100px;
+
+    @include media(">=tablet") {
+      height: 75px;
+    }
+  }
+
+  img {
+    margin: auto;
+    height: 100px;
+  }
+}
+
+.user-slides {
+  .swiper-slide {
+    padding: 5px;
+    position: relative;
+  }
+
+  .text {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  h4,
+  p
+  {
+    color: #fff;
+  }
+
+}
+
+#standalone {
+  transform: scale(0.8);
+}
+.popup_visible #standalone {
+  transform: scale(1);
+}
+
+.white-popup {
+  margin: 20px auto 20px auto;
+  background: url('./images/hydropower-bg.jpg') top center no-repeat;
+  background-size: cover;
+  position: relative;
+  width: auto;
+  max-width: 1200px;
+
+  .side-panel {
+    padding: 20px;
+    background: #163c65;
+    background: rgba(7,40,55,0.75);
+    color: #fff;
+    position: relative;
+
+    h3 {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    .text {
+      padding: 40px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    img {
+      margin-bottom: 40px;
+      padding-right: 60px;
+    }
+  }
+
+  .featured-content {
+    padding: 20px;
+
+    @include media(">=tablet") {
+      padding: 40px;
+    }
+
+    h2,h3
+    {
+      margin: 0;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 300;
+
+      @include media(">=tablet") {
+        font-size: 60px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 30px;
+      font-size: 15px;
+
+      @include media(">=tablet") {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  iframe {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+  }
+}
+
+.acquatic-dialog {
+  background-image: url('./images/acquatic-bg.jpg');
+}
+
+.sturgeon-dialog {
+  background-image: url('./images/sturgeon-bg.jpg');
+}

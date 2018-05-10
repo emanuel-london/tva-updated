@@ -1,0 +1,53 @@
+#map {
+  background: #207698;
+  background: -webkit-linear-gradient(to right, #105c89, #207698);
+  background: linear-gradient(to right, #105c89, #207698);
+
+  position: absolute;
+  top: 115px;
+  bottom: 0;
+  width: 100%;
+
+  @include media(">=tablet") {
+    top: 165px;
+  }
+}
+.mapboxgl-popup {
+  opacity: 0.9;
+}
+.mapboxgl-popup-content {
+  padding: 20px;
+  font-size: 150%;
+  box-shadow: 5px 5px 40px rgba(0,0,0,0.25);
+  background: #02212d;
+
+  @include media(">=tablet") {
+    padding: 10px 40px 40px 40px;
+  }
+}
+
+.mapboxgl-popup-content h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+
+  @include media(">=tablet") {
+    font-size: 30px;
+  }
+}
+
+.mapboxgl-popup-content h4 {
+  margin-bottom: 25px;
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: #02212d;
+}
+
+
+.mapboxgl-popup-close-button {
+  color: rgba(255,255,255,0.5);
+}

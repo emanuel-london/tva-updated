@@ -1,0 +1,31 @@
+  <body class="choose">
+    <div class="container">
+          <app-slider></app-slider>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="welcome animated fadeIn">
+            <h2>Choose one of the TVA areas to explore below.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="select-band animated fadeIn">
+      <form [formGroup]= "areaForm">
+      <ul class="list-inline container" *ngFor = "let area of areas">
+        <li *ngIf="area.name[0].value=='TN River Trek'" class="tn-river">
+          <a *ngIf="area.field_active_status[0].value=='no'"
+           data-toggle="tooltip" data-placement="bottom" 
+           disabled="disabled" title="This module isn't available." formControlName="area">{{area.name[0].value}}</a>
+          <a *ngIf="area.field_active_status[0].value=='yes'" (click) = "onSubmit()" data-toggle="tooltip" data-placement="bottom"  title="{{area.name[0].value}}">{{area.name[0].value}}</a>
+        </li>
+        <!-- <li *ngIf="area.name[0].value!=='TN River Trek'" class="{{area.name[0].value | lowercase }}">
+          <a *ngIf="area.field_active_status[0].value=='no'" data-toggle="tooltip" data-placement="bottom" disabled="disabled" title="This module isn't available.">{{area.name[0].value}}</a>
+          <a *ngIf="area.field_active_status[0].value=='yes'" (click) = "null" data-toggle="tooltip" data-placement="bottom"  title="{{area.name[0].value}}">{{area.name[0].value}}</a>
+        </li> -->
+
+      </ul>
+    </form>
+    </div>
+
+<usernav-component></usernav-component>
+    <img src="dist/images/compass.png" class="compass animated slideInUp">

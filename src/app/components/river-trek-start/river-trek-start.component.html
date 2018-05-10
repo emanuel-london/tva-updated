@@ -1,0 +1,44 @@
+
+    <div class="overlay overlay-sunny" style="height: 745px;"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <app-slider></app-slider>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="welcome animated fadeIn">
+          <h2>Let's start by choosing a few journey paths. This is your River Trek, so tell us what you are interested in, and let's get started.</h2>
+        </div>
+        <form [formGroup]="riverTrekForm" class="form-group level-select level-select-trek row animated fadeIn">
+          <div class="col-md-4 col-sm-6">
+            <div  *ngFor = "let know of knows; let a = index">
+            <label *ngIf = "a < 3"><span class="jcf-checkbox"><span></span><input fromControlerName="skill" name="level" value="{{know.name[0].value}}"  style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;" type="checkbox"></span> {{know.name[0].value}}</label>
+</div>
+</div>
+          <div class="col-md-4 col-sm-6">
+            <div  *ngFor = "let know of knows; let b = index">
+<label *ngIf = "b > 2 && b < 6"><span class="jcf-checkbox"><span></span><input fromControlerName="skill" name="level" value="{{know.name[0].value}}"  style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;" type="checkbox" ></span> {{know.name[0].value}}</label>
+</div>
+</div>
+          <div class="col-md-4 col-sm-6">
+            <div  *ngFor = "let know of knows; let c = index">
+<label *ngIf = "c > 5"><span class="jcf-checkbox" ><span></span><input onclick="checked" fromControlerName="skill" name="level" value="r{{know.name[0].value}}"  style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;" type="checkbox"></span> {{know.name[0].value}}</label>
+         </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 button-holder">
+        
+          <div class="button animated fadeIn">
+              <button (click)="onSubmit()"  fromControlerName="skill" class="btn btn-lg btn-start"> Get Started </button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <usernav-component></usernav-component>
+  <img src="assets/images/compass.png" class="compass animated slideInUp">

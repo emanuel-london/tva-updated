@@ -1,0 +1,33 @@
+  
+
+
+
+
+  <div class="overlay overlay-sunny" style="height: 663px;"></div>
+  <div class="container">
+    <app-slider></app-slider>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="welcome">
+          <img src="assets/images/mockingbird.png" class="wow fadeInDownBig" data-wow-duration="3s" data-wow-delay="1s" style="visibility: visible; animation-duration: 3s; animation-delay: 1s; animation-name: fadeInDownBig;">
+          <app-welcome-component></app-welcome-component>
+        </div>
+        <div class="wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+          <h1><strong>TVA</strong> Explorer</h1>
+        </div>
+        <form class="form-group level-select" [formGroup]="levelsForm">
+
+          <label  *ngFor = "let level of levels"><input type="radio" formControlName="name" name="name" value="{{level.name[0].value}}"  jcf> &nbsp;&nbsp;{{level.name[0].value}}</label>
+        
+
+          <div class="button wow fadeIn">
+            <button  type="submit"  name="validate" formControlName="validate"  (click)="onSubmit()" class="btn btn-lg btn-start" value="1">Choose Your Level</button>
+          </div>
+        
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <usernav-component></usernav-component>
+  <img src="assets/images/compass.png" class="compass animated slideInUp">
