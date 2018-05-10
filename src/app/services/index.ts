@@ -6,3 +6,4 @@ export * from './knowledge.service';
 export * from './levels.service';
 export * from './welcome.service';
 export * from './areas.service';
+export * from './weather.service';

@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
+import { AgmCoreModule, MapsAPILoader } from '@agm/core';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   slidesPerView: 4,
@@ -62,6 +63,7 @@ import {
         SelectBandComponent,
         WelcomeComponent,
         UserNavComponent,
+        WeatherWidgetComponent
       } from './components/index';
 
 
@@ -88,6 +90,7 @@ import {
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    WeatherWidgetComponent
 
   ],
   imports: [
@@ -106,6 +109,9 @@ import {
     accessToken: 'pk.eyJ1IjoiY29udGVudHNjaWVuY2UiLCJhIjoiY2o2ejVndm9yMjdyZzMzczYwdGh2ZHYyZSJ9.KTnjS1mgEkRatw5noEpYvw', // Can also be set per map (accessToken input of mgl-map)
       // tslint:disable-next-line:max-line-length
     geocoderAccessToken: 'TOKEN' // Optionnal, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
+  }),
+  AgmCoreModule.forRoot({
+      libraries: ["places"]
     })
 ],
   providers: [

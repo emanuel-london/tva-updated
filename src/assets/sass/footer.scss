@@ -1,0 +1,27 @@
+.bottom-navigation {
+
+   color: rgba(255, 255, 255, 0.8);
+  strong {
+    font-weight: bold;
+  }
+  #weather {
+    width: 160px;
+    float: right;
+    font-size: 21px;
+    #weather-temp {
+      float: left;
+      background: url("images/temp-bg.png") no-repeat left center;
+      padding-left: 50px;
+      display: inline;
+      margin-right: 10px;
+      float: right;
+    }
+
+    #weather-elevation {
+      float: right;
+      background: url("images/elev-bg.png") no-repeat left center;
+      padding-left: 25px;
+    }
+  }
+
+}

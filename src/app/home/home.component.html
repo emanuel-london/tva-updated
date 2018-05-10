@@ -7,7 +7,7 @@
             {{user.username}} ({{user.firstName}} {{user.lastName}})
             - <a (click)="deleteUser(user.id)">Delete</a>
         </li>
-    </ul> 
+    </ul>
     <p><a [routerLink]="['/login']">Logout</a></p>
 </div>
 -->
@@ -22,12 +22,9 @@
               </ul>
             </div>
             <div class="col-sm-6">
-              <img src="assets/images/weather-elevation.png">
+              <app-weather-widget></app-weather-widget>
               <div id="weather"></div>
             </div>
           </div>
         </div>
       </div>
-      
-      
-      
