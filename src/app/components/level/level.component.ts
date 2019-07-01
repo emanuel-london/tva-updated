@@ -42,7 +42,7 @@ export class LevelComponent implements OnInit {
   onSubmit() {
 
     console.log(this.levelsForm.value);
-     this.router.navigateByUrl('/choose');
+     this.router.navigateByUrl('/contents');
 }
 
 }
