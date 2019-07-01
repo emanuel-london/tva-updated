@@ -29,7 +29,7 @@ export class LevelComponent implements OnInit {
 
       this.levelsForm = fb.group({
         'name': new FormControl(['', Validators.required]),
-        'validate' : new FormControl([!0]),
+        // 'validate' : new FormControl([!0]),
 
       });
        this.levelsService.getLevels().subscribe(levels => {

@@ -22,12 +22,12 @@ import {
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
-import { AuthGuard } from './_guards/index';
+// import { AuthGuard } from './_guards/index';
 
 
-
+// canActivate: [AuthGuard]
 const routes: Routes = [
-  { path: '', component: LevelComponent, canActivate: [AuthGuard] },
+  { path: '', component: LevelComponent  },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'level' , component: LevelComponent },
@@ -36,8 +36,7 @@ const routes: Routes = [
   { path: 'start' , component: StartComponent },
   { path: 'trek-start' , component: RiverTrekStartComponent },
   { path: 'trek-content' , component: RiverTrekContentsComponent  },
-  { path: 'map', component: MapComponent },
-
+  { path: 'map', component: MapComponent }
 ];
 @NgModule({
   imports: [
