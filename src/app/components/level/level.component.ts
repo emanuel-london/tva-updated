@@ -33,6 +33,7 @@ export class LevelComponent implements OnInit {
 
       });
        this.levelsService.getLevels().subscribe(levels => {
+        console.log('Levels',levels);  
         this.levels = levels;
            });
     }
